@@ -1,0 +1,50 @@
+<body>
+
+    <div>
+        <p id="filter">Filter Box</p>
+        calories: <input type="text" id="caloriesFilter" /><br />
+        name:<input type="text" id="nameFilter" /><br /><br />
+        <input type="button" value="Search" onclick="filtering()" />
+    </div>
+
+    <p id="demo"></p>
+    <p id="tablearea"></p>
+    <p id="paging"></p>
+
+    <!--
+       <button type="button" class="btn btn-danger">Primary</button>
+       -->
+
+    <!--<button id="prev" onclick="prev()">قبلی</button>
+    <button id="current" onclick="current()">1</button>
+    <button id="nex" onclick="next()">بعدی</button>-->
+
+    <div class="pagination" id="div1">
+        <a href="#">&laquo;</a>
+
+        <a class="active" href="#" onclick="goToPage(1)">1</a>
+
+        <a href="#" id="aEndTag">&raquo;</a>
+    </div>
+
+</body>
+
+
+
+<script src="page1.js"></script>
+
+
+<!--
+
+<div class="pagination" id="div1">
+    <a href="#">&laquo;</a>
+
+    <a class="active" href="#">1</a>
+ 
+       
+    <a href="#" id="aEndTag">&raquo;</a>
+  </div>
+-->
+
+
+</html>
