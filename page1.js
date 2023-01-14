@@ -11,18 +11,22 @@ var myArr = JSON.parse(str);
 
 
 //------sort by property(value)--------??????
-myArr = myArr.sort(sortByProperty("calories"));
-function sortByProperty(property) {
-    return function (a, b) {
-        //  debugger;
-        if (a[property] > b[property])
-            return 1;
-        else if (a[property] < b[property])
-            return -1;
+myArr = myArr.sort(function (a, b) {
+    return a.calories - b.calories;
+});
 
-        return 0;
-    }
-}
+//myArr = myArr.sort(sortByProperty("calories"));
+//function sortByProperty(property) {
+//    return function (a, b) {
+//        //  debugger;
+//        if (a[property] > b[property])
+//            return 1;
+//        else if (a[property] < b[property])
+//            return -1;
+
+//        return 0;
+//    }
+//}
 
 
 //--------------filtering----------
@@ -30,8 +34,7 @@ function filtering() {
     var inputCalories = document.getElementById("caloriesFilter").value;
     var inputName = document.getElementById("nameFilter").value;
 
-    var filteredArr = myArr.filter(function (item)
-    {
+    var filteredArr = myArr.filter(function (item) {
         return item.name == inputName;
 
 
